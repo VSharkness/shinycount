@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #19191a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #aae6f8;
+}
+
+.container {
+    text-align: center;
+    background-color: #222224;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+
+#counter {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #0248a3, #15b9ea);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0248a3, #15b9ea);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+button:active {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.5s;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.set-counter {
+    margin-top: 20px;
+}
+
+#setCounterInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #15b9ea;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+}
+
+#setCounterInput::placeholder {
+    color: #bccbcc;
+}
+
+
+
+
